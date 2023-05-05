@@ -1,4 +1,4 @@
-# 5xruby-js-202305
+# 5xruby-js-202305-Quiz
 
 ## run server
 
