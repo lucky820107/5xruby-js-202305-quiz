@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>圖片集輪播切換</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.slim.js" integrity="sha256-dWvV84T6BhzO4vG6gWhsWVKVoa4lVmLnpBOZh/CAHU4=" crossorigin="anonymous"></script>
+    <style>
+      img {
+        display: none;
+      }
+      .show {
+        display: block;
+      }
+    </style>
+</head>
+<body>
+  <h1>圖片集輪播切換</h1>
+
+  <div style="width: 300px;">
+    <p>
+      <img src="https://placehold.jp/30/dd6699/ffffff/300x150.png?text=Hello" alt="" class="show">
+      <img src="https://placehold.jp/30/dd6699/ffffff/300x150.png?text=Hello2" alt="">
+      <img src="https://placehold.jp/30/dd6699/ffffff/300x150.png?text=Hello3" alt="">
+    </p>
+
+    <p style="text-align: center;">
+      <button>&lt;</button>
+      <button>&gt;</button>
+    </p>
+  </div>
+
+<!-- 
+  2. 圖片集輪播切換
+
+  有一個圖片集，預設顯示第一張圖片，並有兩個按鈕，分別是「上一張」和「下一張」。
+  當按下「上一張」按鈕時，顯示上一張圖片，當按下「下一張」按鈕時，顯示下一張圖片。
+  當顯示第一張圖片時，按下「上一張」按鈕，則顯示最後一張圖片；當顯示最後一張圖片時，按下「下一張」按鈕，則顯示第一張圖片。
+
+-->
+</body>
+</html>
