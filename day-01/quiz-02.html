@@ -13,7 +13,7 @@
   <h2>題目二：計算矩形的面積</h2>
   <p>長：<input type="number" id="length"></p>
   <p>寬：<input type="number" id="width"></p>
-  <button onclick="calculateArea()">計算面積</button>
+  <button>計算面積</button>
   <p id="areaResult"></p>
 
 <script>
@@ -21,8 +21,15 @@
 題目二：計算矩形的面積
 請編寫一個 JavaScript 函數 `calculateArea` ，接受矩形的長和寬作為參數，並計算並回傳矩形的面積。
 */
+$('button').on('click',function(){
+  let height = +$('#length').val();
+  let width = +$('#width').val();
+    $('#areaResult').text(calculateArea(width, height));
+})
 
-function calculateArea(width, height) {}
+function calculateArea(width, height) {
+  return width * height;
+}
 
 </script>
 </body>

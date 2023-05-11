@@ -12,7 +12,7 @@
   <h2>題目一：計算兩個數字的和</h2>
   <p>數字 1：<input type="number" id="number1"></p>
   <p>數字 2：<input type="number" id="number2"></p>
-  <button onclick="addNumbers()">計算和</button>
+  <button>計算和</button>
   <p id="sumResult"></p>
   
 <script>
@@ -20,8 +20,16 @@
 題目一：計算兩個數字的和
 請編寫一個 JavaScript 函數 `addNumbers` ，接受兩個數字作為參數，並回傳它們的和。
 */
+$('button').on('click',function(){
+  let num1 = +$('#number1').val();
+  let num2 = +$('#number2').val();
+    $('#sumResult').text(addNumbers(num1,num2));
+})
 
-function addNumbers(num1, num2) {}
+
+function addNumbers(num1, num2) {
+  return num1 + num2;
+}
 
 </script>
 </body>

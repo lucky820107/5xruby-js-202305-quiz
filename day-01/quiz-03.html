@@ -11,7 +11,7 @@
 
   <h2>題目三：判斷一個數字是否為偶數</h2>
   <p>數字：<input type="number" id="number3"></p>
-  <button onclick="checkEven()">檢查是否為偶數</button>
+  <button>檢查是否為偶數</button>
   <p id="evenResult"></p>
 
 
@@ -20,8 +20,15 @@
 題目三：判斷一個數字是否為偶數
 請編寫一個 JavaScript 函數 `isEven` ，接受一個數字作為參數，並判斷該數字是否為偶數。 如果是偶數，則回傳 true，否則回傳 false。
 */
+$('button').on('click',function(){
+  let num = +$('#number3').val();
+  let equal = isEven(num);
+  $('#evenResult').text(equal);
+})
 
-function isEven(num) {}
+function isEven(num) {
+  return num % 2 === 0;
+}
 
 </script>
 </body>

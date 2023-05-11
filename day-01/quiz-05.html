@@ -13,7 +13,7 @@
   <p>數字 1：<input type="number" id="number4"></p>
   <p>數字 2：<input type="number" id="number5"></p>
   <p>數字 3：<input type="number" id="number6"></p>
-  <button onclick="checkAverage()">檢查平均值是否大於等於 60</button>
+  <button>檢查平均值是否大於等於 60</button>
   <p id="averageResult"></p>
 
 <script>
@@ -21,8 +21,17 @@
 題目五：計算三個數字的平均值並判斷是否大於等於 60
 請編寫一個 JavaScript 函數 `isAverageAbove60` ，接受三個數字作為參數，計算它們的平均值。 如果平均值大於等於 60，則回傳 true，否則回傳 false。
 */
-
-function isAverageAbove60(num1, num2, num3) {}
+$('button').on('click', function(){
+  let num1 = +$('#number4').val();
+  let num2 = +$('#number5').val();
+  let num3 = +$('#number6').val();
+  let sum = isAverageAbove60(num1, num2, num3);
+  $('#averageResult').text(sum);
+})
+function isAverageAbove60(num1, num2, num3) {
+  let average = (num1 + num2 + num3) /3;
+  return average >= 60;
+}
 
 </script>
 </body>

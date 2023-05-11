@@ -11,7 +11,7 @@
 
   <h2>題目六：判斷是否為閏年</h2>
   <p>年份：<input type="number" id="year"></p>
-  <button onclick="checkLeapYear()">檢查是否為閏年</button>
+  <button>檢查是否為閏年</button>
   <p id="leapYearResult"></p>
 
 <script>
@@ -23,8 +23,20 @@
 如果年份能被 4 整除，且不能被 100 整除，則該年為閏年。
 如果年份能被 100 整除，且能被 400 整除，則該年為閏年。
 */
+$('button').on('click', function(){
+  let year = +$('#year').val();
+  $('#leapYearResult').text(isLeapYear(year));
+});
 
-function isLeapYear(year) {}
+function isLeapYear(year) {
+  if (year % 4 === 0){
+    return '閏年';
+  } else if (year % 100 === 0) {
+    return '閏年';
+  } else {
+    return '不是閏年';
+  };
+};
 
 </script>
 </body>
