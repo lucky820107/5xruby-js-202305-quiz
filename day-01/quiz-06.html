@@ -24,7 +24,9 @@
 如果年份能被 100 整除，且能被 400 整除，則該年為閏年。
 */
 
-function isLeapYear(year) {}
+  function isLeapYear(year) {
+    return new Date(year, 2, 0).getDate() === 29;
+  }
 
 </script>
 </body>
