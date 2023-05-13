@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>圖片洗牌</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.slim.js" integrity="sha256-dWvV84T6BhzO4vG6gWhsWVKVoa4lVmLnpBOZh/CAHU4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./quiz-03.css" />
+</head>
+<body>
+
+    <!-- 容器 -->
+    <div class="card-wrap"></div>
+
+    <script>
+      // 3. 修改這份程式，
+      // 透過迴圈生成 8 * 2 (16) 張牌 (.flip-card)，並隨機打散順序。
+
+      // 新增卡片
+      for(let i = 1; i <= 16; i++) {
+        // open class 表示翻開
+        $('.card-wrap').append(`<div class="flip-card open">
+            <div class="flip-card-inner">
+              <div class="flip-card-front"></div>
+              <div class="flip-card-back">
+                <img src="./img/cat-01.jpg" alt="">
+              </div>
+            </div>
+          </div>`);
+      }
+
+    
+    </script>
+</body>
+</html>
