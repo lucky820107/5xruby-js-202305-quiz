@@ -38,5 +38,40 @@
   當顯示第一張圖片時，按下「上一張」按鈕，則顯示最後一張圖片；當顯示最後一張圖片時，按下「下一張」按鈕，則顯示第一張圖片。
 
 -->
+<script>
+  $(function(){
+    const next = $('button:last');
+    const prev = $('button:first');
+      
+    next.on('click', function() {
+      if($('img').eq(0).hasClass('show')) {
+        $('img').eq(0).removeClass('show');
+        $('img').eq(1).addClass('show');
+      }else if($('img').eq(1).hasClass('show')) {
+        $('img').eq(1).removeClass('show');
+        $('img').eq(2).addClass('show');
+      }else if($('img').eq(2).hasClass('show')) {
+        $('img').eq(2).removeClass('show');
+        $('img').eq(0).addClass('show');
+      }
+    })
+
+    prev.on('click', function() {
+      if($('img').eq(0).hasClass('show')) {
+        $('img').eq(0).removeClass('show');
+        $('img').eq(2).addClass('show');
+      }else if($('img').eq(1).hasClass('show')) {
+        $('img').eq(1).removeClass('show');
+        $('img').eq(0).addClass('show');
+      }else if($('img').eq(2).hasClass('show')) {
+        $('img').eq(2).removeClass('show');
+        $('img').eq(1).addClass('show');
+      }
+    })
+  })
+  
+
+  
+</script>
 </body>
 </html>

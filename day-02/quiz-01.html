@@ -20,5 +20,24 @@
   程式根據使用者的輸入給出提示：較大、較小或正確。
   使用者可無限次數嘗試猜測，直到猜對為止，並提示對方猜了幾次。
 -->
+<script>
+  let calculate = Math.floor(Math.random() * 100) + 1;
+  chance = 0;
+
+  $('#submitGuess').on('click', function(){
+    chance++
+    let numbers = +$('#userGuess').val();
+    
+    if( numbers === calculate ) {
+      $('#feedback').text(`恭喜猜中！猜了${chance}次`);
+    }else if( numbers > calculate ) {
+      $('#feedback').text('數字太大瞜～');
+    }else if( numbers < calculate ) {
+      $('#feedback').text('數字太小瞜～');
+    }
+  })
+
+  
+</script>
 </body>
 </html>

@@ -125,7 +125,8 @@
   <script>
     // 完成按鈕功能
     $('.btn').on('click', function () {
-
+      let cards = $('.select').val();
+      $('.card').removeClass('col-sm-1 col-sm-2 col-sm-3 col-sm-4').addClass(cards);
     });
   </script>
 
