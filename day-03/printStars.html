@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>印星星</title>
+  <style>
+    #stars-container {
+      font-family: monospace;
+      white-space: pre;
+      padding: 5px;
+      margin-top: 1rem;
+      width: 500px;
+      border: 1px solid #eee;
+      background-color: #f1f1f1;
+    }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.6.4.slim.js" integrity="sha256-dWvV84T6BhzO4vG6gWhsWVKVoa4lVmLnpBOZh/CAHU4=" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <div>
+    <label>
+      輸入層數 <input class="level" type="number" min="1" max="10">
+    </label>
+    
+    <select class="print-type">
+      <option value="triangle">正三角型</option>
+      <option value="inverted-triangle">倒三角形</option>
+      <option value="isosceles-triangle">等腰三角形</option>
+      <option value="diamond">菱形</option>
+    </select>
+    <button class="submit">送出</button>
+  </div>
+
+  <div id="stars-container"></div>
+
+  <script>
+    // 正三角形
+    function printTriangle(level) {
+      // 待完成
+    }
+
+    // 倒三角形
+    function printInvertedTriangle(level) {
+      // 待完成
+    }
+
+    // 等腰三角形
+    function printIsoscelesTriangle(level) {
+      // 待完成
+    }
+
+    // 菱形
+    function printDiamond(level) {
+      // 僅供參考
+      let stars = '';
+      for (let i = 1; i <= level; i++) {
+        const spaces = ' '.repeat(level - i);
+        const starLine = '*'.repeat(i * 2 - 1);
+        stars += spaces + starLine + '\n';
+      }
+      for (let i = level - 1; i >= 1; i--) {
+        const spaces = ' '.repeat(level - i);
+        const starLine = '*'.repeat(i * 2 - 1);
+        stars += spaces + starLine + '\n';
+      }
+      return stars;
+    }
+    
+    // 印星星
+    $('.submit').on('click', () => {
+      const level = +$('.level').val();
+      const printType = $('.print-type').val();
+
+      switch (printType) {
+        case 'triangle':
+          $('#stars-container').text(printTriangle(level));
+          break;
+        case 'inverted-triangle':
+          $('#stars-container').text(printInvertedTriangle(level));
+          break;
+        case 'isosceles-triangle':
+          $('#stars-container').text(printIsoscelesTriangle(level));
+          break;
+        case 'diamond':
+          $('#stars-container').text(printDiamond(level));
+          break;
+      }
+    });
+    
+    
+  </script>
+</body>
+</html>
